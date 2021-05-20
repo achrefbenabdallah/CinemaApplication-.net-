@@ -1,0 +1,8 @@
+﻿@{
+    var myChart = new Chart(width: 600, height: 400)
+       .AddTitle("Employees")
+       .AddSeries(chartType: "column",
+          xValue: new[] { "Nombre d'utilisateurs", "Nombre des films", "Numbro total des commande", "Nombre des facture impayée", "Nombre des salles" },
+          yValues: new[] {@ViewBag.users,@ViewBag.movies, @ViewBag.commande, @ViewBag.factures, @ViewBag.salle })
+       .Write();
+}
