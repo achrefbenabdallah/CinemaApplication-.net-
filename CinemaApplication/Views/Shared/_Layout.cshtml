@@ -25,6 +25,7 @@
                     <li>@Html.ActionLink("Accueil", "Index", "Home")</li>
                     <li>@Html.ActionLink("List des films", "Index", "movies")</li>
                     <li>@Html.ActionLink("List des salles", "Index", "Salles")</li>
+
                     @if (User.IsInRole("client"))
                     {
                         <li>@Html.ActionLink("Panier", "Index", "LigneCommandes")</li>
@@ -34,9 +35,9 @@
                     <li>@Html.ActionLink("Changer mot de passe", "ChangePassword", "Manage")</li>
                     @if (User.IsInRole("admin"))
                     {
-                        <li><a href="https://localhost:44303/Admin/AdminLayout" target="_blank">Voir Statistique</a></li>
+                        <li><a href="https://localhost:44303/Admin/AdminLayout" target="_blank">Statistique</a></li>
                     }
-
+                    <li>@Html.ActionLink("Contact", "Index", "Mail")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

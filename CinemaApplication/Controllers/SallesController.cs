@@ -123,5 +123,20 @@ namespace CinemaApplication.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult listMovies(int? id)
+        {
+
+            List<movies> listMovies = db.movies.Include(m=>m.salle).ToList();
+            List<movies> movies = new List<movies>();
+            foreach(var item in listMovies)
+            {
+                if (item.salle.id == id && item.disponibilite==true)
+                {
+                    movies.Add(item);
+                }
+            }
+            return View(movies.ToList());
+        }
     }
 }

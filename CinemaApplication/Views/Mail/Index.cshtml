@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@if (ViewBag.msg != null)
+{
+    <div class="alert alert-success">@ViewBag.msg</div>
+}
+<br />
+<br />
+@using (Html.BeginForm())
+{
+    <div align="center">
+        <h2>Send Mail</h2><br /><br /><br />
+        <img src="https://cdn4.iconfinder.com/data/icons/managers-9/307/Untitled-4-512.png" alt="Avatar" class="avatar"><br />
+        <input type="text" name="usermail" class="form-control" placeholder="Email" /><br />
+        <input type="text" name="sujet" class="form-control" placeholder="objet" /><br />
+
+        <textarea id="subject" name="objet" placeholder="Write something.." style="height:200px"></textarea><br />
+
+        <button class="btn btn-success" type="submit"><i class="fa fa-envelope"> Send Mail</i></button>
+
+
+
+    </div>
+}
+<style>
+    input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+
+
+    label {
+        width: 100%;
+    }
+
+    img.avatar {
+        width: 20%;
+        border-radius: 30%;
+    }
+</style>
+
+

@@ -174,6 +174,7 @@
     <Compile Include="Controllers\facturesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LigneCommandesController.cs" />
+    <Compile Include="Controllers\MailController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\moviesController.cs" />
     <Compile Include="Controllers\SallesController.cs" />
@@ -2045,6 +2046,8 @@
     <Content Include="Views\movies\Edit.cshtml" />
     <Content Include="Views\movies\Index.cshtml" />
     <Content Include="Views\Admin\AdminLayout.cshtml" />
+    <Content Include="Views\Salles\listMovies.cshtml" />
+    <Content Include="Views\Mail\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
